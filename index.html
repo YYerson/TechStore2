@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones</title>
+    <link rel="stylesheet" href="css/integrador.css">
+</head>
+
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <p class="etiqueta">CAPACITACION EMPRESARIAL</p>
+            <h1>Reserva de cursos</h1>
+            <p>Registar a los participantes de tu próxima capacitación</p>
+        </header>
+        <section class="panel">
+            <h2>Datos de la reserva</h2>
+
+            <form id="formReserva">
+                <label for="nombre">Nombre del participante</label>
+                <input type="text" id="nombre" required>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" required>
+                <label for="curso">Curso:</label>
+                <select id="curso" required>
+                    <option value="">Selecciona un curso</option>
+                    <option value="excel">Excel para los negocios</option>
+                    <option value="proyectos">Gestión de proyectos</option>
+                    <option value="datos">Analisis de datos</option>
+                </select>
+
+                <label for="cantidad">Cantidad de participantes</label>
+                <input type="number" id="cantidad" min="1" step="1" required>
+                <button type="submit">Calcular reserva</button>
+            </form>
+        </section>
+
+        <section class="panel resultado-panel">
+            <h2>Resumen de la reserva</h2>
+            <div id="resultado" aria-live="polite">
+                Completa los datos para consultar el importe
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/integrador.js"></script>
+</body>
+
+</html>
